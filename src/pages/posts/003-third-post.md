@@ -3,6 +3,10 @@ title: "Third Post - Intro to CSS3"
 date: "2018-12-03 07:00:00"
 author: "John Doe"
 path: "/third-post"
+image: "../../images/css.jpg"
+tags:
+  - css
+  - tutorial
 ---
 
 Now that we know what HTML is, this time we are going to dive into CSS3.
