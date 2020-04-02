@@ -10,9 +10,10 @@ const IndexPage = () => (
     <h1>Home Page</h1>
     <StaticQuery query={IndexQuery} render={data => {
       return (
-        <div>
-          {data.allMarkdownRemark.edges.map(({node}) => (
+        <>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
             <Post
+              key={node.id}
               title={node.frontmatter.title}
               author={node.frontmatter.author}
               path={node.frontmatter.path}
@@ -20,7 +21,7 @@ const IndexPage = () => (
               body={node.excerpt}
             />
           ))}
-        </div>
+        </>
       )
     }} />
   </Layout>
