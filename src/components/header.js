@@ -15,7 +15,7 @@ const Header = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed)
 
   return (
-    <div>
+    <>
       <Navbar fixed="top" light expand="sm">
         <NavbarBrand href="/" className="mr-auto">{props.siteTitle}</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
@@ -27,7 +27,7 @@ const Header = (props) => {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </>
   )
 }
 
