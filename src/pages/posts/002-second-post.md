@@ -3,7 +3,7 @@ title: "Second Post - Intro to React"
 date: "2018-12-02 07:00:00"
 author: "Jane Doe"
 path: "/second-post"
-image: "../../images/react.jpg"
+image: "../../images/coding.jpg"
 tags:
   - code
   - react
