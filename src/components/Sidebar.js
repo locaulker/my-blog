@@ -24,6 +24,9 @@ const sidebarQuery = graphql`
               }
             }
           }
+          fields {
+            slug
+          }
         }
       }
     }
@@ -77,7 +80,7 @@ const Sidebar = () => {
                   </Link>
                   <CardBody>
                     <CardTitle>
-                      <Link to={node.frontmatter.title}>
+                      <Link to={node.frontmatter.path}>
                         {node.frontmatter.title}
                       </Link>
                     </CardTitle>

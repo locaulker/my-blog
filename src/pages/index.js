@@ -19,8 +19,8 @@ query{
           title
           date(formatString: "MMM. Do, YYYY")
           author
-          path
           tags
+          path
           image {
             childImageSharp {
               fluid(maxWidth: 600) {
