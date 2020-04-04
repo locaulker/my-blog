@@ -5,10 +5,11 @@ import SEO from '../components/seo'
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
+import authors from '../util/authors'
 
 
 export const postQuery = graphql`
-  query ($path: String!) {
+  query ($path: String!, $imageUrl: String!) {
     markdownRemark(frontmatter: {path: {eq: $path}}) {
       id
       html
@@ -30,14 +31,26 @@ export const postQuery = graphql`
         slug
       }
     }
+    file(relativePath: {eq: $imageUrl}) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
 const SinglePost = ({ data }) => {
   const post = data.markdownRemark.frontmatter
+  const author = authors.find(x => x.name === post.author)
 
   return (
-    <Layout pageTitle={post.title}>
+    <Layout
+      pageTitle={post.title}
+      postAuthor={author}
+      authorImageFluid={data.file.childImageSharp.fluid}
+    >
       <SEO title={post.title} />
 
       <Card>

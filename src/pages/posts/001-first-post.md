@@ -1,17 +1,22 @@
 ---
-title: "First Post - Introduction"
-date: "2018-12-01 07:00:00"
-author: "John Doe"
+title: "First Post - Intro to React"
+date: "2018-12-02 07:00:00"
+author: "Jane Doe"
 path: "/first-post"
-image: "../../images/blog.jpg"
+image: "../../images/react.jpg"
 tags:
-  - blog
   - code
+  - react
+  - design
 ---
 
-Welcome to MyBlog. I hope you will find the content useful and engaging.
-Venus, which in the early era was almost a twin of the Earth, in its further evolution went another way. Therefore, Venus, like no other planet, allows us to see what the evolution of our planet could have been (or may be) under the influence of not yet fully understood external or internal causes. 
+This is an introduction to React. Today we are going to talk about React.
+Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Qui officia deserunt mollit anim id est laborum. Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 
-Venus is the second planet from the Sun. It occupies a special position among other planets of the terrestrial group. Until recently, it was called a twin of the Earth. The similarity between Venus and Earth in size and mass (and thus in density and gravity) suggests that the inner structure of the two planets is similar. However, the more advanced the study of Venus, the less it remained features of the "twin" of the Earth. 
+In order for the acquired tan to last a long time, it is necessary to observe the following rules:
 
-Venus - the closest planet to the Earth, in its closest rapprochement it separates from the Earth only 40 million km. Light travels this distance in 2 minutes 12 seconds. But in this period we see only the night streak of the planet. We fully see its day time stature with the greatest distance of Venus from the Earth (260 million km).
+Sunbathing in the shade. In order not to harm the skin, it is necessary to sunbathe in the shade, that is, under the indirect rays of the sun. But in this case it will take more time to get a tan.
+
+Take into account the individual characteristics of your skin. On a swarthy skin tan falls more quickly and lasts longer, so a white woman needs to first prepare the skin for sunburn. Start the process of preparation with the adoption of water procedures: baths, saunas, home baths with the addition of sea salt. In this case, the skin will be steamed, and the exfoliating agents will remove all dirt and keratinized particles. This procedure helps to get a faster and more even tan.
+
+Use of special cosmetics. After the sun bathing, it is necessary to take care of the moisturizing of the skin. As already mentioned above, sun exposure to the skin leads to exfoliation of the upper layers of the epidermis.

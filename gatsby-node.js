@@ -1,5 +1,6 @@
 const { slugify } = require('./src/util/utilityFunctions')
 const path = require('path')
+const authors = require('./src/util/authors')
 
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -45,7 +46,11 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: singlePostTemplate,
         context: {
-          slug: node.frontmatter.path
+          // slug to template single-post.js
+          slug: node.frontmatter.path,
+
+          // find author imageUrl from authors and pass it to single-post template
+          imageUrl: authors.find(x => x.name === node.frontmatter.author).imageUrl
         }
       })
     ))
