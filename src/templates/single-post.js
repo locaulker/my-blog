@@ -6,6 +6,7 @@ import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
 import authors from '../util/authors'
+import { DiscussionEmbed } from 'disqus-react'
 
 
 export const postQuery = graphql`
@@ -45,8 +46,15 @@ const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
 
-  const baseUrl = 'https://gatsbytutorial.co.uk/'
-  // const baseUrl = 'http://creativedev.pro/'
+  // const baseUrl = 'https://gatsbytutorial.co.uk/'
+  const baseUrl = 'http://creativedev.pro/'
+
+  const disqusShortname = 'https://mybloglocal.disqus.com'
+  const disqusConfig = {
+    identifier: data.markdownRemark.id,
+    title: post.title,
+    url: baseUrl + pageContext.slug
+  }
 
   return (
     <Layout
@@ -140,6 +148,11 @@ const SinglePost = ({ data, pageContext }) => {
 
         </ul>
       </div>
+
+      <DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
+      />
 
     </Layout>
   )
