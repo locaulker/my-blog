@@ -41,9 +41,12 @@ export const postQuery = graphql`
   }
 `
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
   const author = authors.find(x => x.name === post.author)
+
+  const baseUrl = 'https://gatsbytutorial.co.uk/'
+  // const baseUrl = 'http://creativedev.pro/'
 
   return (
     <Layout
@@ -75,6 +78,68 @@ const SinglePost = ({ data }) => {
           </ul>
         </CardBody>
       </Card>
+
+      <h3 className="text-center">Share this post</h3>
+      <div className="text-center social-share-links">
+        <ul>
+
+          <li>
+            <a
+              href={'https://facebook.com/sharer/sharer.php?u='
+                + baseUrl
+                + pageContext.slug}
+              className="facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-facebook-f fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href={'https://twitter.com/share?url='
+                + baseUrl
+                + pageContext.slug
+                + '&text='
+                + post.title
+                + 'twitterHandle'
+              }
+              className="twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href={'https://plus.google.com/share?url='
+                + baseUrl
+                + pageContext.slug
+              }
+              className="google"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-google fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href={'https://www.linkedin.com/shareArticle?url='
+                + baseUrl
+                + pageContext.slug
+              }
+              className="linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin fa-2x"></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
 
     </Layout>
   )
